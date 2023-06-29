@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IT Security System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f2f2f2;
+            background-image: url('C:\Users\Sana\Desktop\ITSystem\ITsystem\wolfeye\templates\wolfeye\bg.png');
+            background-size: cover;
+            background-position: center;
+        }
+        
+
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scan IP Address</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <br>
+            <h2>SMB SCAN</h2>
+            <p>SMB (Server Message Block) is a network protocol used for sharing files, printers, and other resources between computers in a Windows-based network. In the context of a pentest reconnaissance or information gathering phase, SMB is an important target for gathering valuable information about the target network. It provides access to shared files and directories, user account information, network configuration details, and potentially sensitive data. By conducting SMB enumeration, a pentester can identify available SMB shares, enumerate user accounts, discover system information, and potentially exploit misconfigurations or vulnerabilities to gain unauthorized access or gather further intelligence about the target network.</p>
+            <h2>SMTP SCAN</h2>
+            <p>SMTP (Simple Mail Transfer Protocol) is a protocol used for sending and receiving email messages. In the context of a pentest reconnaissance or information gathering phase, SMTP can provide valuable insights and potential attack vectors. By conducting SMTP enumeration, a pentester can gather information about the target organization's email infrastructure, such as email servers, mail exchangers, and email addresses associated with the domain. This information can be used to identify potential email-based attack vectors, such as phishing, email spoofing, or email account enumeration. Additionally, SMTP enumeration can reveal misconfigurations or vulnerabilities that can be exploited to gain unauthorized access, intercept email traffic, or manipulate email delivery.</p>
+            <h2>SSH SCAN</h2>
+            <p>SSH (Secure Shell) is a cryptographic network protocol used for secure remote access to systems and secure file transfers. In the context of a pentest reconnaissance or information gathering phase, SSH plays a significant role in understanding the target network and potential security vulnerabilities. By conducting SSH enumeration, a pentester can identify SSH servers, enumerate user accounts, and gather information about allowed authentication methods, encryption algorithms, and SSH configurations. This information can be used to assess the strength of SSH security controls, detect weak or default credentials, identify potential avenues for brute-force attacks or password guessing, and explore possibilities for privilege escalation or unauthorized access to sensitive systems.</p>
+            <h2>HTTP SCAN</h2>
+            <p>HTTP (Hypertext Transfer Protocol) is the foundation of data communication on the World Wide Web. In the context of pentest reconnaissance or information gathering, HTTP plays a vital role in understanding the target's web infrastructure and potential vulnerabilities. By conducting HTTP enumeration, a pentester can gather information about web servers, identify web applications and their versions, discover accessible directories, and enumerate files and directories. This information helps in identifying potential attack vectors such as outdated software versions, misconfigurations, known vulnerabilities, or sensitive information exposed through web applications. Additionally, analyzing HTTP responses, headers, cookies, and session handling can provide insights into the security posture and potential areas for further investigation or exploitation.</p>
+        <br>
+        <button type="submit">Scan</button>
+    </form>
+</body>
+</html>

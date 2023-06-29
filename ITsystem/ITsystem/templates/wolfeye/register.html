@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+</head>
+<body>
+    <h1>User Registration</h1>
+    <form method="POST">
+        {% csrf_token %}
+        
+        {{ user_form.as_p }}
+
+        <h2>Financial Information</h2>
+        {{ financial_form.as_p }}
+
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

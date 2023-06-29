@@ -1,0 +1,32 @@
+# Nmap 7.94 scan initiated Mon Jun 26 11:38:37 2023 as: C:\\Users\\Sana\\Desktop\\ITSystem\\ITsystem\\wolfeye\\Nmap\\nmap.exe -p 135,139,445 -T 3 -sC -oN smb.txt -Pn 5.180.187.106
+Nmap scan report for udtags.circumstand.com (5.180.187.106)
+Host is up (1.2s latency).
+
+PORT    STATE SERVICE
+135/tcp open  msrpc
+|_ms-sql-info: ERROR: Script execution failed (use -d to debug)
+|_ms-sql-ntlm-info: ERROR: Script execution failed (use -d to debug)
+139/tcp open  netbios-ssn
+|_ms-sql-info: ERROR: Script execution failed (use -d to debug)
+|_ms-sql-ntlm-info: ERROR: Script execution failed (use -d to debug)
+445/tcp open  microsoft-ds
+|_ms-sql-info: ERROR: Script execution failed (use -d to debug)
+|_ms-sql-ntlm-info: ERROR: Script execution failed (use -d to debug)
+
+Host script results:
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_ms-sql-info: ERROR: Script execution failed (use -d to debug)
+|_smb-os-discovery: ERROR: Script execution failed (use -d to debug)
+|_clock-skew: mean: -1s, deviation: 0s, median: -1s
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2023-06-26T08:38:45
+|_  start_date: N/A
+
+# Nmap done at Mon Jun 26 11:39:38 2023 -- 1 IP address (1 host up) scanned in 61.09 seconds

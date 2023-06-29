@@ -1,0 +1,51 @@
+Card No 1
+Card Brand
+Visa
+visa card generator
+Card Number
+4400-3754-3237-4928
+copy-icon
+Holder Name
+Tom Dicki
+copy-icon
+CVV/CVV2: 860
+Card Expiry: 12/2023
+C:\Users\Sana\Desktop\ITSystem\ITsystem\wolfeye\templates\wolfeye\bg.png
+
+# Check if the IP address argument is provided
+if ($args.Length -lt 1) {
+    Write-Host "Please provide an IP address as a command-line argument."
+    exit
+}
+
+$IPAddress = $args[0]
+
+# Run Nmap scan with NSE scripts for SMB
+$nmapCommand = "nmap -p 445 --script=smb* -oN smb_scan_results.txt $IPAddress"
+Invoke-Expression -Command $nmapCommand
+
+# Additional scans using specific NSE scripts
+$additionalScans = @(
+    "smb-enum-domains.nse",
+    "smb-enum-groups.nse",
+    "smb-enum-processes.nse",
+    "smb-enum-sessions.nse",
+    "smb-enum-shares.nse",
+    "smb-enum-users.nse",
+    "smb-mbenum.nse"
+)
+
+foreach ($scan in $additionalScans) {
+    $nmapCommand = "nmap -p 445 --script=$scan -oN smb_additional_scan_results.txt $IPAddress"
+    Invoke-Expression -Command $nmapCommand
+}
+
+# Parse and display the Nmap scan results
+$scanResults = Get-Content -Path "smb_scan_results.txt"
+$additionalScanResults = Get-Content -Path "smb_additional_scan_results.txt"
+
+# Filter and display relevant information
+$filteredResults = $scanResults, $additionalScanResults | Select-String "Host is up|445/tcp open|OS:|SMB"
+$filteredResults
+
+smb_result = subprocess.run(['powershell', '-EP', 'Bypass', '-File', 'smb/smb.ps1',106.51.38.178 ],capture_output=True, text=True)

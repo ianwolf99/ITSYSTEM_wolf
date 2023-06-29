@@ -1,0 +1,45 @@
+# Nmap 7.94 scan initiated Tue Jun 27 08:54:52 2023 as: C:\\Users\\Sana\\Desktop\\ITSystem\\ITsystem\\wolfeye\\Nmap\\nmap.exe -p 135,139,445 -T 3 -sV -A -sC -oN C:\\Users\\Sana\\Desktop\\ITSystem\\ITsystem\\wolfeye\\smb_results.txt -Pn 122.180.30.57
+Nmap scan report for nsg-corporate-057.30.180.122.airtel.in (122.180.30.57)
+Host is up (0.35s latency).
+
+PORT    STATE SERVICE      VERSION
+135/tcp open  msrpc        Microsoft Windows RPC
+139/tcp open  netbios-ssn  Microsoft Windows netbios-ssn
+445/tcp open  microsoft-ds Microsoft Windows 7 - 10 microsoft-ds (workgroup: WORKGROUP)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|specialized|bridge
+Running (JUST GUESSING): Microsoft Windows 7|2008|8.1|Vista|2012|10 (94%), Digi embedded (87%)
+OS CPE: cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_server_2008 cpe:/o:microsoft:windows_8.1 cpe:/o:microsoft:windows_vista::sp1:home_premium cpe:/o:microsoft:windows_server_2012:r2 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_10:1607 cpe:/o:microsoft:windows_10:1511
+Aggressive OS guesses: Microsoft Windows 7 SP1 or Windows Server 2008 (94%), Microsoft Windows 7 Ultimate (94%), Microsoft Windows 8.1 (94%), Microsoft Windows 8.1 Update 1 (94%), Microsoft Windows 7 SP1 (92%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 (92%), Microsoft Windows Windows 7 SP1 (92%), Microsoft Windows Vista Home Premium SP1, Windows 7, or Windows Server 2008 (92%), Microsoft Windows Vista SP1 (92%), Microsoft Windows 7 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 12 hops
+Service Info: Host: JSB1-PC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: -2s
+|_nbstat: NetBIOS name: JSB1-PC, NetBIOS user: <unknown>, NetBIOS MAC: 40:8d:5c:d6:d2:17 (Giga-byte Technology)
+| smb2-security-mode: 
+|   2:1:0: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2023-06-27T05:55:15
+|_  start_date: 2023-06-26T05:22:07
+|_smb-os-discovery: ERROR: Script execution failed (use -d to debug)
+
+TRACEROUTE (using port 139/tcp)
+HOP RTT       ADDRESS
+1   10.00 ms  192.168.100.1
+2   6.00 ms   197-248-215-12.safaricombusiness.co.ke (197.248.215.12)
+3   12.00 ms  196.201.222.145
+4   16.00 ms  105.21.0.25
+5   141.00 ms ae-2.cr-01-mba.ke.seacomnet.com (105.16.17.1)
+6   147.00 ms xe-0-1-0-5.cr-02-lhr.uk.seacomnet.com (105.16.13.14)
+7   150.00 ms ce-0-0-47.cr-02-lhr.uk.seacomnet.com (105.16.13.133)
+8   141.00 ms ae-1.pp-01-lhr.uk.seacomnet.com (105.16.35.8)
+9   235.00 ms 195.66.226.204
+10  359.00 ms 116.119.106.240
+11  359.00 ms 125.18.73.18
+12  337.00 ms nsg-corporate-057.30.180.122.airtel.in (122.180.30.57)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Jun 27 08:55:56 2023 -- 1 IP address (1 host up) scanned in 63.47 seconds

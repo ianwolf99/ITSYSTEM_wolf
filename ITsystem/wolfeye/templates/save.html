@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IT Security System - Scan Result</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            background-color: #000;
+            color: #0F0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0F0;
+            margin-bottom: 20px;
+        }
+
+        pre {
+            background-color: #000;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 14px;
+            line-height: 1.4;
+            overflow-x: auto;
+            border: 1px solid #0F0;
+        }
+
+        pre::before {
+            content: '$';
+            color: #0F0;
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scan Result</h1>
+    <pre>{{ scan_output }}</pre>
+</body>
+</html>
+
+use this 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IT Security System - Scan Result</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            background-color: #2d2d2d;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        pre {
+            background-color: #000;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 14px;
+            line-height: 1.4;
+            overflow-x: auto;
+            border: 1px solid #4CAF50;
+            color: #fff;
+        }
+
+        pre::before {
+            content: '$';
+            color: #4CAF50;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .output-line {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .output-info {
+            color: #2196F3;
+        }
+
+        .output-error {
+            color: #F44336;
+        }
+
+        .output-warning {
+            color: #FFC107;
+        }
+    </style>
+</head>
+<body>
+    <h1>Scan Result</h1>
+    <pre>{{ scan_output }}</pre>
+</body>
+</html>
+use this
